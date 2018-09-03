@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+	<nav class="navbar-default navbar-static-side" role="navigation" th:fragment="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> 
+                    	<!--<span>-->
+                            <!--<img alt="image" class="img-circle" th:src="@{/img/profile_big.jpg}" />-->
+						<!--</span>-->
+                    	<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <!--<span class="clear">-->
+                            	<span class="block m-t-xs">
+                            <strong class="font-bold navbar-minimalize minimalize-styl-2">统一上传插件</strong>
+                             	<!--</span>-->
+                                    <!--<span class="navbar-minimalize minimalize-styl-2  " href="#"><i class="fa fa-bars"></i> </span>-->
+                             </span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a th:href="@{dashboard}"><i class="fa fa-diamond"></i> <span class="nav-label">首页</span></a>
+                </li>
+                <li id="news">
+                    <a href="#"><i class="fa fa-cloud-upload"></i> <span class="nav-label">数据上报</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li id="newsManage"><a th:href="@{newsManage_0_0_0}">数据文件上报</a></li>
+                        <li id="newsCategoryManage"><a th:href="@{newsCategoryManage_0_0_0}">处理进度查看</a></li>
+                        <li id="reportingProgress"><a href="#">上报进度查看</a></li>
+                        <li id="reportingResult"><a href="#">上报结果统计</a></li>
+                        <li id="helpText"><a href="#">帮助文档</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">上报管理</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="#">信息资源配置</a></li>
+
+                    </ul>
+                </li>
+                <li id="users">
+                    <a href="#"><i class="fa fa-cog"></i> <span class="nav-label">权限管理</span><span class="fa arrow"></span>
+                        <!--<span class="label label-warning pull-right">16</span>-->
+                    </a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="mailbox.html">角色管理</a></li>
+                        <li id="authorization"><a th:href="@{authorization}">用户授权</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
+
+
+
